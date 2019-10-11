@@ -1,0 +1,18 @@
+﻿  Lamp.cpp
+c:\users\choyj\source\repos\univ_cpp\1_0903\9_1008\user.h(13): error C2061: 구문 오류: 식별자 'Lamp'
+c:\users\choyj\source\repos\univ_cpp\1_0903\9_1008\user.h(15): error C2061: 구문 오류: 식별자 'Lamp'
+  main.cpp
+c:\users\choyj\source\repos\univ_cpp\1_0903\9_1008\user.h(13): error C2061: 구문 오류: 식별자 'Lamp'
+c:\users\choyj\source\repos\univ_cpp\1_0903\9_1008\user.h(15): error C2061: 구문 오류: 식별자 'Lamp'
+c:\users\choyj\source\repos\univ_cpp\1_0903\9_1008\main.cpp(44): error C2660: 'User::turnOnOff': 함수는 1개의 매개 변수를 사용하지 않습니다.
+  c:\users\choyj\source\repos\univ_cpp\1_0903\9_1008\user.h(13): note: 'User::turnOnOff' 선언을 참조하십시오.
+c:\users\choyj\source\repos\univ_cpp\1_0903\9_1008\main.cpp(45): error C2660: 'User::turnOnOff': 함수는 1개의 매개 변수를 사용하지 않습니다.
+  c:\users\choyj\source\repos\univ_cpp\1_0903\9_1008\user.h(13): note: 'User::turnOnOff' 선언을 참조하십시오.
+c:\users\choyj\source\repos\univ_cpp\1_0903\9_1008\main.cpp(46): error C2660: 'User::changeLight': 함수는 1개의 매개 변수를 사용하지 않습니다.
+  c:\users\choyj\source\repos\univ_cpp\1_0903\9_1008\user.h(15): note: 'User::changeLight' 선언을 참조하십시오.
+c:\users\choyj\source\repos\univ_cpp\1_0903\9_1008\main.cpp(53): error C2660: 'User::turnOnOff': 함수는 1개의 매개 변수를 사용하지 않습니다.
+  c:\users\choyj\source\repos\univ_cpp\1_0903\9_1008\user.h(13): note: 'User::turnOnOff' 선언을 참조하십시오.
+  User.cpp
+c:\users\choyj\source\repos\univ_cpp\1_0903\9_1008\lamp.h(15): error C2061: 구문 오류: 식별자 'User'
+c:\users\choyj\source\repos\univ_cpp\1_0903\9_1008\user.cpp(15): error C2659: '=': 함수를 왼쪽 피연산자로 사용했습니다.
+  코드를 생성하고 있습니다...
