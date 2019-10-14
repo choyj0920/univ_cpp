@@ -1,2 +1,6 @@
 ﻿  Cell.cpp
+  console_cont.cpp
+C:\Users\choyj\source\repos\univ_cpp\HW_3_CPP_201810754\HW_3_CPP_1810754\console_cont.cpp(12,16): warning C4838: 'int'에서 'SHORT'(으)로의 변환에는 축소 변환이 필요합니다.
+  코드를 생성하고 있습니다...
+C:\Users\choyj\source\repos\univ_cpp\HW_3_CPP_201810754\HW_3_CPP_1810754\console_cont.cpp(12,19): warning C4838: 'int'에서 'SHORT'(으)로의 변환에는 축소 변환이 필요합니다.
   HW_3_CPP_1810754.vcxproj -> C:\Users\choyj\source\repos\univ_cpp\HW_3_CPP_201810754\Debug\HW_3_CPP_1810754.exe
