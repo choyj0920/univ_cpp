@@ -81,6 +81,7 @@ void Cell::playGame()
 		showMap(map, row, col); //맵보여주기
 		if (!select_cell(map, row, col, x, y)) { //select_cell함수 실행 -리턴false(폭탄을 열음)
 			gotoxy(0, 0); cout << "--------GAME OVER!---------" << endl; //게임오버 표시
+			showMap(map, row, col); //맵보여주기
 			Sleep(2000); //2초 있다가
 			system("cls");
 			cout << "게임에서 지셨네요..." << endl;//게임패배 문구 출력
@@ -89,6 +90,7 @@ void Cell::playGame()
 	}
 	//while문 나왔는데 종료 x? -> 지뢰찾기 성공
 	gotoxy(0, 0); cout << "--------지뢰 찾기 성공!!---------" << endl;
+	showMap(map, row, col); //맵보여주기
 	print_HELP(row, col, boomcount); //열은 셀 횟수 다시 보여주기
 	Sleep(2000); //2초쉬고
 	system("cls");
@@ -190,7 +192,7 @@ void Cell::cell_hideoff(Cell **(&map), const int & row, const int & col, int x, 
 
 void Cell::printcell(int x, int y) const
 {
-	string aa[] = {"□","1","2","3","4","5","6","7","8" };//셀에 출력할 문자열
+	string aa[] = {"□","①","②","③","④","⑤","⑥","⑦","⑧" };//셀에 출력할 문자열
 	gotoxy(x, y);
 	if (ishide) {
 		if (ischeck)

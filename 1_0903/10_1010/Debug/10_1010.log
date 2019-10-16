@@ -1,2 +1,9 @@
-﻿  10_1010.cpp
-  10_1010.vcxproj -> C:\Users\choyj\source\repos\univ_cpp\1_0903\Debug\10_1010.exe
+﻿  pch.cpp
+  10_1010.cpp
+  Dice.cpp
+  MyPoint.cpp
+  Player.cpp
+C:\Users\choyj\source\repos\univ_cpp\1_0903\10_1010\Player.cpp(6,1): error C2084: 'Player::Player(void)' 함수에 이미 본문이 있습니다.
+  Rectangle.cpp
+  코드를 생성하고 있습니다...
+C:\Users\choyj\source\repos\univ_cpp\1_0903\10_1010\Player.h(8): message : '{ctor}'의 이전 정의를 참조하십시오.
