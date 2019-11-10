@@ -1,4 +1,5 @@
-﻿
+﻿#include "..\15_1107\Ticket.h"
+
 #include <iostream>
 #include <string>
 using namespace std;
@@ -25,6 +26,9 @@ class Ticket{
 	User** user;
 	Ticket() {
 
+	}
+	Ticket::~Ticket()
+	{
 	}
 	Ticket(string _title, double _price, string _fname) {
 		this->fname = _fname;
