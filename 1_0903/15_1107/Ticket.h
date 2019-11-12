@@ -12,6 +12,6 @@ public:
 	int getNumber();
 	virtual double getPrice();
 	void setPrice(double price);
-	void show();
+	virtual void show();
 };
 

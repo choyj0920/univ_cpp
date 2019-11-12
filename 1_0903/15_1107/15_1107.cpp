@@ -4,11 +4,11 @@
 using namespace std;
 int main()
 {
-	GeneralTicket gt(20, 1000, true);
-	gt.show();
-	Ticket* tt[3];
-	tt[2] = &gt;
-	tt[2]->show();
+	//GeneralTicket gt(20, 1000, true);
+	//gt.show();
+	//Ticket* tt[3];
+	//tt[2] = &gt;
+	//tt[2]->show();
 	//AdvanceTicket at(20, 1000, 20);
 	//at.show();
 	//Ticket tt(21, 1000);
@@ -23,6 +23,15 @@ int main()
 	//tm.ticketing(new GeneralTicket(22, 2000, true));
 	//tm.showTickets();
 	//tm.getTotalprice();
+
+
+
+	Ticket tt(20, 1000);
+	GeneralTicket gt(21, 1000,true);
+	AdvanceTicket at(22, 1000, 20);
+	tt.show();
+	gt.show();
+	at.show();
 	return 0;
 }
 
