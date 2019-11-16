@@ -1,2 +1,7 @@
 ﻿  16_1112.cpp
-  16_1112.vcxproj -> C:\Users\choyj\source\repos\univ_cpp\1_0903\Debug\16_1112.exe
+  GeneralTicket.cpp
+C:\Users\choyj\source\repos\univ_cpp\1_0903\16_1112\TickteManager.h(2,10): fatal error C1083: 포함 파일을 열 수 없습니다. 'GeneralTicket.h': No such file or directory
+  TickteManager.cpp
+c1xx : fatal error C1083: 소스 파일을 열 수 없습니다. 'GeneralTicket.cpp': No such file or directory
+  코드를 생성하고 있습니다...
+C:\Users\choyj\source\repos\univ_cpp\1_0903\16_1112\TickteManager.h(2,10): fatal error C1083: 포함 파일을 열 수 없습니다. 'GeneralTicket.h': No such file or directory

@@ -1,0 +1,6 @@
+﻿  17_1114.cpp
+  time.cpp
+C:\Users\choyj\source\repos\univ_cpp\1_0903\17_1114\17_1114.cpp(8,20): warning C4244: '초기화 중': 'double'에서 'long'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+  코드를 생성하고 있습니다...
+C:\Users\choyj\source\repos\univ_cpp\1_0903\17_1114\time.cpp(66,15): warning C4244: '초기화 중': 'double'에서 'int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+  17_1114.vcxproj -> C:\Users\choyj\source\repos\univ_cpp\1_0903\Debug\17_1114.exe
