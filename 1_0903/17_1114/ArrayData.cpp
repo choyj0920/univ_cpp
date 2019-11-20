@@ -90,7 +90,7 @@ void ArrayData::showData() const
 void ArrayData::operator=(const ArrayData& copy)
 {
 	if (capacity != copy.capacity) {
-		delete data;
+		delete [] data;
 		capacity = copy.capacity;
 		data = new double[copy.capacity];
 	}
@@ -104,7 +104,7 @@ void ArrayData::operator=( ArrayData&& copy)
 {
 	cout << "이동 연산자 수행\n";
 	if (data != NULL) {
-		delete data;
+		delete [] data;
 	}
 	capacity = copy.capacity;
 	used = copy.used;

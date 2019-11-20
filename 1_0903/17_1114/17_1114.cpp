@@ -29,6 +29,7 @@ int main()
 {
 	cout << "7조 박진영 양석준 송재원 조윤직\n";
 
+	/*
 	time t1(4,10);
 	time t2(2, 55);
 	t1.show();
@@ -43,9 +44,9 @@ int main()
 	time t4 = 10 + t3;
 	t4.show();
 	cout << t4;
+	*/
 
-
-	/*
+	
 	ArrayData data(10);
 	data.addElement(10.0);
 	data.addElement(10.1);
@@ -58,8 +59,9 @@ int main()
 	data2.showData();
 
 	ArrayData data3;
-	data3 = ArrayData(10);
-	*/
+	data3 = ArrayData(5);
+	data3.showData();
+
 
 }
 
