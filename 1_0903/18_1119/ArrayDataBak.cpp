@@ -21,9 +21,9 @@ ArrayDataBak::ArrayDataBak(const ArrayDataBak& copy):ArrayData(copy),usedB(copy.
 		backdata[i] = copy.backdata[i];
 }
 
-ArrayDataBak::ArrayDataBak( ArrayDataBak&& copy) :ArrayData(copy), usedB(copy.usedB), backdata(copy.backdata)
-{
-	ArrayData::operator=(copy);
+ArrayDataBak::ArrayDataBak( ArrayDataBak&& copy) :ArrayData(move(copy)), usedB(copy.usedB), backdata(copy.backdata)
+{//std::move를 이용 copy를 다시 r-value로 바꿔줌
+
 	cout << copy.usedB << "백업이동 생성자\n";
 	copy.backdata = nullptr;
 }
@@ -65,7 +65,8 @@ ArrayDataBak ArrayDataBak::getCopyInstance(const ArrayDataBak& copy)
 void ArrayDataBak::operator=(const ArrayDataBak& copy)
 {	
 	cout << "자식 복사대입연산자실행" << endl;
-
+	int n;
+	n = 3+getUsed();
 	if (getCapacity() != copy.getCapacity()) {
 		delete [] backdata;
 		getCapacity() = copy.getCapacity();
@@ -81,8 +82,11 @@ void ArrayDataBak::operator=(const ArrayDataBak& copy)
 
 void ArrayDataBak::operator=(ArrayDataBak&& copy)
 {
+	copy.getCapacity();
 	cout << "백업 이동 연산자 수행\n";
-	ArrayData::operator=(copy);
+	//std::move를 이용 copy를 다시 r-value로 바꿔줌
+
+	ArrayData::operator=(move(copy));
 
 	if (backdata != NULL) {
 		delete[] backdata;
