@@ -30,7 +30,7 @@ TArrayDataBak<T>::TArrayDataBak():TArrayData()
 
 template<typename T>
 TArrayDataBak<T>::TArrayDataBak(const int& capacity): TArrayData<T>(capacity)
-{
+{//부모 생성자에 <T>를 적어야 오류가 안나 더라..
 	usedB = 0;
 	backdata = new T[capacity];
 }

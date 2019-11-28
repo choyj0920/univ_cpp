@@ -1,18 +1,20 @@
-﻿
-#include "Student.h"
+﻿#include "Student.h"
 #include "ArrayData.h"
 #include "TArrayDataBak.h"
 #include <vector>
 using namespace std;
 
+
 ostream& operator<<(ostream& out, Student& copy) {
 	out << "이름 : " << copy.name << ", 성적 : " << copy.score;
 	return out;
 }
+//studen* 출력 함수
 ostream& operator<<(ostream& out,const  Student* copy) {
 	out << "이름 : " << copy->name << ", 성적 : " << copy->score;
 	return out;
 }
+
 template<typename T3>
 ostream& operator<<(ostream& out, const TArrayData<T3>& copy) {
 	copy.showData();
@@ -48,7 +50,7 @@ void deleteVectorele(vector<T1>& v) {
 	//v가 비워질 때까지 실행
 	while (!v.empty())
 	{
-		//동적할당 제거, vector 원소팝
+		//동적할당 제거, vector 원소-팝
 		delete v.back();
 		v.pop_back();
 	}
@@ -57,36 +59,46 @@ void deleteVectorele(vector<T1>& v) {
 
 int main()
 {
-
-	/*TArrayDataBak<Student> std(10);
+/*
+	//실습 1
+	TArrayDataBak<Student> std(10);
 
 	std.addElement(Student("greenjoa1", 50));
 	std.addElement(Student("greenjoa2", 20));
 	std.addElement(Student("greenjoa3", 30));
-	std.backup();
 	std.showData();
 	cout << "백업\n";
+	std.backup();
+
 	cout << "원소 추가\n";
 	std.addElement(Student("greeen", 10));
 	std.showData();
+	cout << "====복구====\n";
+
 	std.restore();
-	std.showData();*/
+	std.showData();
+	*/
+	
+	/*
+	//실습2 -vector 출력 템플릿함수-iterator 사용
+	vector<int > intarr;
+	intarr.push_back(10);
+	intarr.push_back(20);
+	intarr.push_back(30);
+	intarr.push_back(40);
+	intarr.push_back(50);
+	intarr.push_back(60);
+	printArr(intarr);
+	vector<double> doublearr;
+	doublearr.push_back(10.1);
+	doublearr.push_back(10.2);
+	doublearr.push_back(10.3);
+	doublearr.push_back(10.4);
+	printArr(doublearr);
+	*/
 
-	//vector<int > intarr;
-	//intarr.push_back(10);
-	//intarr.push_back(10);
-	//intarr.push_back(10);
-	//intarr.push_back(10);
-	//intarr.push_back(10);
-	//intarr.push_back(10);
-	//printArr(intarr);
-	//vector<double> doublearr;
-	//doublearr.push_back(10.1);
-	//doublearr.push_back(10.1);
-	//doublearr.push_back(10.1);
-	//doublearr.push_back(10.1);
-	//printArr(doublearr);
 
+	//실습 3 -stdarr 동적할당 해제, 원소 삭제함수
 	vector<Student*> stdarr;
 	stdarr.push_back(new Student("greanjoa1", 20));
 	stdarr.push_back(new Student("greanjoa2", 20));
@@ -94,7 +106,6 @@ int main()
 	stdarr.push_back(new Student("greanjoa4", 20));
 	stdarr.push_back(new Student("greanjoa5", 20));
 	printArr(stdarr);
-
 	//
 	deleteVectorele(stdarr);
 	
