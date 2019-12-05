@@ -74,28 +74,11 @@ bool KorGreater(const Student& t1, const Student& t2) {
 }
 int main()
 {
-	/*
-		//실습 1
-		TArrayDataBak<Student> std(10);
-
-		std.addElement(Student("greenjoa1", 50));
-		std.addElement(Student("greenjoa2", 20));
-		std.addElement(Student("greenjoa3", 30));
-		std.showData();
-		cout << "백업\n";
-		std.backup();
-
-		cout << "원소 추가\n";
-		std.addElement(Student("greeen", 10));
-		std.showData();
-		cout << "====복구====\n";
-
-		std.restore();
-		std.showData();
-		*/
+	
 
 		
-		//실습1 - 값 찾아서 지우기
+		//실습1 -vector 값 찾아서 지우기
+		
 		vector<int > intarr;
 		vector<int > intarr2;
 		intarr.push_back(10);
@@ -104,7 +87,7 @@ int main()
 		intarr.push_back(40);
 		intarr.push_back(50);
 		intarr.push_back(60);
-		//printArr(intarr);
+		printArr(intarr);
 
 		vector<int>::iterator it;
 		it = intarr.begin();
@@ -115,28 +98,34 @@ int main()
 				break;
 				}
 		}
-		//printArr(intarr);
+		cout << "intarr출력\n";
+		printArr(intarr);
 
 
+		
+		
+
+		//실습 2 swap 	/*
 		intarr2.push_back(40);
 		intarr2.push_back(90);
 		intarr2.push_back(100);
 		intarr2.push_back(120);
 		intarr2.push_back(150);
-		//실습 2 swap 
-		/*
+		cout << "intarr2출력\n";
 		printArr(intarr2);
 		cout << "intarr 주소 : " << &intarr << endl;
 		cout << "intarr2 주소 : " << &intarr2 << endl;
+		cout << "=====swap=====\n";
 		intarr.swap(intarr2);
 		cout << "intarr 주소 : " << &intarr << endl;
 		cout << "intarr2 주소 : " << &intarr2 << endl;
+		cout << "intarr출력\n";
 		printArr(intarr);
+		cout << "intarr2출력\n";
 		printArr(intarr2);
-		*/
+		//*/
 
-		//벡터와 동일하지만 앞에서부터도 들어 갈수 있는 deque
-		/*
+		//벡터와 동일하지만 앞에서부터도 들어 갈수 있는 deque		/*
 		deque<int> de;
 		de.push_front(20);
 		de.push_front(30);
@@ -153,10 +142,11 @@ int main()
 		for (int i = 0; i < de.size(); i++) {
 			cout << de[i] << "\t";
 		}
-		*/
+		cout << "\n";
 
-		//List 
-		/*
+		//*/
+
+		//List 			/*
 		list <int> arr3;
 		arr3.push_back(80);
 		arr3.push_back(40);
@@ -168,20 +158,21 @@ int main()
 			cout << i << "\t";
 		}
 		cout << "\n";
-		arr3.sort();
+		cout << "sort(default) 실행" << endl;  arr3.sort();
 		for (int i : arr3) {
 			cout << i << "\t";
 		}
 		cout << "\n";
 		greater<int> g;
-
-		arr3.sort(g);
+		//greater함수나 디폴트매개로 주는 sort는 각각 less(<),greater(>)가
+		//정의 되어있는 클래스(,타입)만 가능- 정의시에는 const를 꼭!
+		cout << "sort(greater) 실행" << endl;  arr3.sort(g);
 		for (int i : arr3) {
 			cout << i << "\t";
 		}
-		*/
-		//사용자 정의 클래스  sort 
-		/*
+		cout << "\n";
+		//*/
+		//사용자 정의 클래스  sort 		/*
 		list<Student> stdarr;
 		stdarr.push_back(Student("greanjoa1", 20));
 		stdarr.push_back( Student("greanjoa2", 40));
@@ -213,9 +204,11 @@ int main()
 		for (Student s : stdarr) {
 			cout << s << "\n";
 		}
-		*/
+		//*/
 
-		//map
+		//map		/*
+
+		cout << "키로 접근 하는 map!\n";
 		map<string, Student> stdd;
 		stdd["홍길동"] = Student("홍길동", 20);
 		stdd["김길동"] = Student("김길동", 20);
@@ -225,24 +218,45 @@ int main()
 		cout << stdd["강길동"] << endl;
 
 		// Stack
+		cout << "lastinfirstout-stack\n";
 		stack<int> sta;
 		sta.push(2);
 		sta.push(5);
 		sta.push(2);
 		sta.push(1);
 		while (!sta.empty()) {
-			cout << sta.top() << endl;
+			cout << sta.top() << "\t";
 			sta.pop();
 		}
-		//priority_queue
+		//*/
 
+		//priority_queue-		/*
+		cout << "자동 정렬 priority_queue\n";
 		std::priority_queue<int> intpq;
-		
+		//이렇게 정렬함수를 시작부터 정의해줄수도 있음
+		std::priority_queue<int, vector<int>, greater<int> > pq;
 		intpq.push(4);
 		intpq.push(1);
 		intpq.push(2);
 		intpq.push(4);
 		intpq.push(2);
 		intpq.push(8);
+		cout << "intpq : ";
+		while (!intpq.empty()) {
+			cout << intpq.top() << "\t";
+			intpq.pop();
+		}
+		cout << "\n--pq : ";
+		pq.push(4);
+		pq.push(1);
+		pq.push(2);
+		pq.push(4);
+		pq.push(2);
+		pq.push(8);
+		while (!pq.empty()) {
+			cout << pq.top() << "\t";
+			pq.pop();
+		}
 
+		//*/
 }
