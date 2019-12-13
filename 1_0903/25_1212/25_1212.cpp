@@ -19,6 +19,7 @@ ostream& operator<<(ostream& out, const vector<VendingMachine*>& vending) {
 bool lessmachine(const VendingMachine* a, const VendingMachine* b) {
 	return *a < *b;
 }
+
 int main()
 {
 	//1번

@@ -19,6 +19,7 @@ public:
 	bool operator<(const VendingMachine& v)const {
 		return count < v.count;
 	}
+	
 	friend ostream& operator<<(ostream& out, const VendingMachine& vending);
 
 	
